@@ -1,8 +1,589 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=PTA.html">
-  </head>
-  <body>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pause • Think • Act (PTA) – Cybersecurity Awareness</title>
+  <meta name="description" content="Pause, Think, and Act (PTA): a simple, research-backed framework to make safer decisions online. Learn it, try it, share it with a QR code." />
+  <meta name="theme-color" content="#0d6efd" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pta.css" />
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container py-2">
+      <a class="navbar-brand" href="#">
+        <span style="background: linear-gradient(135deg, var(--pta-blue), var(--pta-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pause, Think & Act</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#framework">Framework</a></li>
+          <li class="nav-item"><a class="nav-link" href="#audience">Audience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visual">Visual</a></li>
+          <li class="nav-item"><a class="nav-link" href="#toolkit">Toolkit</a></li>
+          <li class="nav-item">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <i class="bi bi-moon-stars" id="themeIcon"></i>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-gradient" href="#share">
+              <i class="bi bi-qr-code-scan me-1"></i> Share
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero py-5 py-lg-6">
+    <div class="container position-relative" style="z-index: 1;">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 text-white">
+          <span class="badge bg-white text-primary px-3 py-2 rounded-pill badge-animated" style="font-size: 0.9rem;">
+            🔐 Cybersecurity Awareness Month
+          </span>
+          <h1 class="display-4 fw-bold mt-4" style="font-size: 3.5rem; line-height: 1.1;">
+            Pause, Think, and Act
+          </h1>
+          <p class="lead mt-3 mb-4" style="font-size: 1.25rem; opacity: 0.95;">
+            A simple, science-backed mental model to slow down risky clicks and build safer habits online.
+          </p>
+          <div class="d-flex gap-3 mt-4 flex-wrap">
+            <a href="#framework" class="btn btn-light btn-lg px-4">
+              <i class="bi bi-lightning-charge me-2"></i> Learn the 3 Steps
+            </a>
+            <a href="#toolkit" class="btn btn-lg px-4">
+              <i class="bi bi-tools me-2"></i> Try Interactive Tools
+            </a>
+          </div>
+          <p class="mt-4 small" style="opacity: 0.9;">
+            Based on dual-process thinking, nudge theory, and self-efficacy—translated into everyday actions.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="glass-card text-white">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-shield-check" style="font-size: 3rem;"></i>
+              <div>
+                <h5 class="mb-1 fw-bold">PTA in 10 seconds</h5>
+                <p class="mb-0 small" style="opacity: 0.9;">
+                  Pause for a beat → Think for clues → Act with intention
+                </p>
+              </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.3);">
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Works for phishing, BEC, scams, misinformation</li>
+              <li class="mb-2"><i class="bi bi-check-circle me-2"></i>Teachable in minutes; practice daily</li>
+              <li class="mb-0"><i class="bi bi-check-circle me-2"></i>Great for schools, workplaces, and families</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABSTRACT / INTRO -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-7 reveal">
+          <h2 class="fw-bold mb-4">Abstract</h2>
+          <p class="lead text-muted">
+            This concept paper presents the <strong>Pause, Think, and Act (PTA)</strong> framework as a mental model for heightening cybersecurity consciousness and inducing more secure online habits.
+          </p>
+          <p style="color: var(--text-light);">
+            PTA counters risks linked with rash decisions across digital platforms by providing a structured way to evaluate threats and respond. The paper outlines its theoretical basis, core steps, target groups, and practical uses in cybersecurity education and training.
+          </p>
+
+          <h3 class="mt-5 fw-bold mb-3">Introduction</h3>
+          <p style="color: var(--text-light);">
+            From phishing emails and ransomware to social media fraud, we navigate threats daily. PTA is a clear, memorable strategy to slow down, check for risk, and take intentional action that protects accounts, data, and money.
+          </p>
+        </div>
+        <div class="col-lg-5 reveal">
+          <div class="step-card h-100">
+            <h5 class="fw-bold mb-3">
+              <i class="bi bi-lightbulb text-warning me-2"></i>
+              Theories behind PTA
+            </h5>
+            <div class="mb-3">
+              <h6 class="fw-semibold">Dual-Process Theory</h6>
+              <p class="small mb-0" style="color: var(--text-light);">
+                Switch from fast (System 1) to deliberate (System 2) when risk cues appear.
+              </p>
+            </div>
+            <div class="mb-3">
+              <h6 class="fw-semibold">Nudge Theory</h6>
+              <p class="small mb-0" style="color: var(--text-light);">
+                A gentle reminder—<em>pause first</em>—shifts behavior without force.
+              </p>
+            </div>
+            <div>
+              <h6 class="fw-semibold">Self-Efficacy</h6>
+              <p class="small mb-0" style="color: var(--text-light);">
+                A simple checklist boosts confidence to handle threats.
+              </p>
+            </div>
+            <div class="alert alert-primary mt-4 mb-0">
+              <i class="bi bi-info-circle me-2"></i>
+              <strong>Tip:</strong> Add PTA language to team policies and posters for constant cues.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK STEPS -->
+  <section id="framework" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="fw-bold mb-3">The PTA Framework — Three Steps</h2>
+        <p class="text-muted">Use across email, messaging, websites, and social networks</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="step-card h-100">
+            <span class="badge text-bg-primary mb-3">Step 1</span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-pause-circle text-primary icon-lg"></i>
+              <h4 class="mb-0 fw-bold">Pause</h4>
+            </div>
+            <p style="color: var(--text-light);" class="mb-3">
+              Resist instant reactions. Take a breath before you click, reply, or download.
+            </p>
+            <ul class="small" style="color: var(--text-light);">
+              <li class="mb-2">Wait 10–30 seconds for urgency to fade</li>
+              <li class="mb-2">Re-read the message/title carefully</li>
+              <li class="mb-0">Ask: <em>What's the rush? Who benefits?</em></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card h-100">
+            <span class="badge text-bg-warning mb-3">Step 2</span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-search-heart icon-lg" style="color: var(--pta-yellow);"></i>
+              <h4 class="mb-0 fw-bold">Think</h4>
+            </div>
+            <p style="color: var(--text-light);" class="mb-3">
+              Scan for red flags and verify through a second, trusted route.
+            </p>
+            <ul class="small" style="color: var(--text-light);">
+              <li class="mb-2">Check sender domain, spelling, tone</li>
+              <li class="mb-2">Hover to preview links; don't open yet</li>
+              <li class="mb-0">Call the organization via a saved number</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card h-100">
+            <span class="badge text-bg-success mb-3">Step 3</span>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-shield-check text-success icon-lg"></i>
+              <h4 class="mb-0 fw-bold">Act</h4>
+            </div>
+            <p style="color: var(--text-light);" class="mb-3">
+              Choose a safe action based on your checks; report so others are protected too.
+            </p>
+            <ul class="small" style="color: var(--text-light);">
+              <li class="mb-2">Delete, block, or report if suspicious</li>
+              <li class="mb-2">Use official apps/portals to proceed</li>
+              <li class="mb-0">Escalate to IT/security if at work/school</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-success mt-5 mb-0 reveal" style="border-left: 4px solid var(--pta-green);">
+        <i class="bi bi-lightbulb me-2"></i>
+        <strong>Scenario:</strong> "Your bank account is locked. Verify now." → Pause (don't click) → Think (hover link, mismatch domain) → Act (report email, log in via your app—no issues found).
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section id="audience" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="fw-bold mb-3">Who is PTA for?</h2>
+        <p class="text-muted">Short lessons, big impact across different groups</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="step-card h-100 text-center">
+            <i class="bi bi-mortarboard icon-lg mb-3" style="color: var(--pta-blue);"></i>
+            <h5 class="fw-bold mb-3">Students</h5>
+            <p class="text-muted small mb-0">
+              Avoid scams while researching and collaborating online. Cross-check sources and profiles before engaging.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card h-100 text-center">
+            <i class="bi bi-briefcase icon-lg mb-3" style="color: var(--pta-purple);"></i>
+            <h5 class="fw-bold mb-3">Professionals</h5>
+            <p class="text-muted small mb-0">
+              Reduce phishing/BEC risk. Verify payment changes and urgent requests through a known channel.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card h-100 text-center">
+            <i class="bi bi-people icon-lg mb-3" style="color: var(--pta-green);"></i>
+            <h5 class="fw-bold mb-3">General Public</h5>
+            <p class="text-muted small mb-0">
+              Protect against identity theft, harassment, and social media fraud with a consistent routine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL MODEL -->
+  <section id="visual" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <h2 class="fw-bold mb-3">PTA at a Glance</h2>
+        <p class="text-muted">A three-panel visual to reinforce the habit</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="pt-panel panel-pause h-100">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-clock-history icon-lg" style="color: var(--pta-blue);"></i>
+              <div>
+                <h5 class="mb-1 fw-bold">Pause</h5>
+                <small>Don't respond right away.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="pt-panel panel-think h-100">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-brain icon-lg" style="color: var(--pta-yellow);"></i>
+              <div>
+                <h5 class="mb-1 fw-bold">Think</h5>
+                <small>Consider and analyze.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="pt-panel panel-act h-100">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-patch-check icon-lg" style="color: var(--pta-green);"></i>
+              <div>
+                <h5 class="mb-1 fw-bold">Act</h5>
+                <small>Make an informed move.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLKIT -->
+  <section id="toolkit" class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-7 reveal">
+          <h2 class="fw-bold mb-4">PTA Toolkit</h2>
+          <p class="text-muted mb-4">Practice with a quick checklist and a micro-simulation of a phishing email.</p>
+          
+          <div class="checklist mb-5">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="cl1">
+              <label class="form-check-label" for="cl1">I paused 10–30 seconds before acting.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="cl2">
+              <label class="form-check-label" for="cl2">I inspected sender, spelling, and tone for red flags.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="cl3">
+              <label class="form-check-label" for="cl3">I hovered to preview links without opening them.</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="cl4">
+              <label class="form-check-label" for="cl4">I verified through a trusted channel (saved number/app).</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="cl5">
+              <label class="form-check-label" for="cl5">I chose a safe action (delete/report/proceed via official app).</label>
+            </div>
+          </div>
+
+          <div class="sim-card">
+            <div class="card-header bg-transparent border-bottom py-3">
+              <h6 class="mb-0 fw-bold">
+                <i class="bi bi-envelope-exclamation me-2 text-danger"></i>
+                Micro-Sim: Suspicious Email
+              </h6>
+            </div>
+            <div class="card-body p-4">
+              <p class="mb-2"><strong>Subject:</strong> Urgent: Account Verification Required</p>
+              <p class="mb-2 small text-muted"><strong>From:</strong> security@bnk-alerts.example</p>
+              <p class="mb-4">Your account has been locked for security reasons. <a href="#" id="fakeLink" class="link-danger text-decoration-underline">Verify now</a> to avoid permanent closure.</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <button class="btn btn-outline-secondary" id="btnHover">
+                  <i class="bi bi-cursor me-1"></i> Hover link
+                </button>
+                <button class="btn btn-outline-primary" id="btnVerify">
+                  <i class="bi bi-shield-check me-1"></i> Verify via app
+                </button>
+                <button class="btn btn-outline-danger" id="btnReport">
+                  <i class="bi bi-flag me-1"></i> Report phishing
+                </button>
+              </div>
+              <div id="simFeedback" class="mt-3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 reveal" id="share">
+          <div class="qr-container">
+            <h5 class="fw-bold mb-2">
+              <i class="bi bi-qr-code-scan me-2"></i>Share this page
+            </h5>
+            <p class="text-muted small mb-4">Generate a QR code for quick sharing during workshops or posters.</p>
+            <div class="text-center mb-4">
+              <div id="qrcode"></div>
+            </div>
+            <div class="d-flex gap-2 mb-3">
+              <input type="text" class="form-control" id="qrInput" placeholder="URL or text" aria-label="QR content">
+              <button class="btn btn-primary" id="qrMake">
+                <i class="bi bi-qr-code"></i>
+              </button>
+            </div>
+            <div class="d-flex gap-2 mb-3">
+              <button class="btn btn-outline-secondary flex-fill" id="qrThis">
+                <i class="bi bi-link-45deg me-1"></i>This page
+              </button>
+              <button class="btn btn-outline-success flex-fill" id="qrDownload">
+                <i class="bi bi-download me-1"></i>Download
+              </button>
+            </div>
+            <div class="alert alert-info mb-0 small">
+              <i class="bi bi-lightbulb me-1"></i> 
+              <strong>Tip:</strong> Print the QR on a poster with the three panels above.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-8 reveal">
+          <h2 class="fw-bold mb-4">Summary</h2>
+          <p class="lead">
+            The PTA framework blends insights from cognitive psychology and behavioral economics into a simple habit: <em>Pause</em>, <em>Think</em>, then <em>Act</em>.
+          </p>
+          <p class="text-muted">
+            Use it daily to reduce exposure to phishing, scams, and other cyberattacks. Future work can measure PTA's impact across schools, workplaces, and public programs.
+          </p>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="step-card">
+            <h6 class="fw-bold mb-3">
+              <i class="bi bi-box-arrow-down me-2 text-primary"></i>
+              Quick Resources
+            </h6>
+            <ul class="small text-muted mb-0">
+              <li class="mb-2">Poster-ready 3-panel visual</li>
+              <li class="mb-2">Checklist for training</li>
+              <li class="mb-0">QR sharing for events</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 mt-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-4 text-center text-md-start">
+        <div class="small text-muted">© <span id="year"></span> PTA Cybersecurity Awareness</div>
+        <div class="small text-muted">All Rights Reserved</div>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <div class="small fw-semibold mb-2">Developed by TEAM S3CURE IT</div>
+        <div class="small text-muted text-center" style="white-space: nowrap;">
+          Kim Reuben Tabanda • Jyd Librando • Angel Mae Sagre
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center text-md-end">
+        <div class="d-flex justify-content-center justify-content-md-end gap-3">
+          
+          <a href="#" style="display: inline-flex; align-items: center;">
+            <img src="cit.png" alt="CIT Logo" 
+                 style="height: 1.5rem; width: auto;">
+          </a>
+
+
+          
+          <a href="#" style="display: inline-flex; align-items: center;">
+            <img src="unor.png" alt="UNO-R Logo" 
+                 style="height: 1.5rem; width: auto;">
+          </a>
+
+          
+          <a href="#" style="display: inline-flex; align-items: center;">
+            <img src="cisco.png" alt="Cisco Logo" 
+                 style="height: 1.5rem; width: auto;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      themeIcon.className = theme === 'light' ? 'bi bi-moon-stars' : 'bi bi-sun-fill';
+    }
+
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    
+    function checkReveal() {
+      reveals.forEach(reveal => {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveal.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkReveal);
+    checkReveal(); // Check on load
+
+    // Micro-simulation buttons
+    const feedback = document.getElementById('simFeedback');
+    const btnHover = document.getElementById('btnHover');
+    const btnVerify = document.getElementById('btnVerify');
+    const btnReport = document.getElementById('btnReport');
+
+    btnHover.addEventListener('click', () => {
+      feedback.innerHTML = `<div class="alert alert-warning mb-0"><i class="bi bi-exclamation-triangle me-2"></i> Hover preview shows <code>bnk-alerts.example</code> — not your bank's real domain. Good catch! Proceed to verify via the official app.</div>`;
+    });
+
+    btnVerify.addEventListener('click', () => {
+      feedback.innerHTML = `<div class="alert alert-success mb-0"><i class="bi bi-shield-check me-2"></i> Correct: use the bank's official app or saved number. No issues found when logging in directly.</div>`;
+    });
+
+    btnReport.addEventListener('click', () => {
+      feedback.innerHTML = `<div class="alert alert-primary mb-0"><i class="bi bi-flag me-2"></i> Reported to security/IT and deleted. Sharing saves others from the same attack.</div>`;
+    });
+
+    // QR Code tools
+    const qrContainer = document.getElementById('qrcode');
+    let qr;
+
+    function makeQR(text) {
+      qrContainer.innerHTML = '';
+      qr = new QRCode(qrContainer, { 
+        text, 
+        width: 200, 
+        height: 200, 
+        correctLevel: QRCode.CorrectLevel.M 
+      });
+    }
+
+    makeQR(window.location.href);
+
+    document.getElementById('qrThis').addEventListener('click', () => {
+      makeQR(window.location.href);
+      document.getElementById('qrInput').value = window.location.href;
+    });
+
+    document.getElementById('qrMake').addEventListener('click', () => {
+      const v = document.getElementById('qrInput').value.trim();
+      if(v) makeQR(v);
+    });
+
+    document.getElementById('qrDownload').addEventListener('click', () => {
+      const img = qrContainer.querySelector('img');
+      const canvas = qrContainer.querySelector('canvas');
+      let dataURL = '';
+      if (img && img.src) dataURL = img.src;
+      if (!dataURL && canvas) dataURL = canvas.toDataURL('image/png');
+      if (!dataURL) return;
+      const a = document.createElement('a');
+      a.href = dataURL;
+      a.download = 'pta-qr.png';
+      a.click();
+    });
+
+    document.getElementById('qrInput').value = window.location.href;
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Prevent fake link click
+    document.getElementById('fakeLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      feedback.innerHTML = `<div class="alert alert-danger mb-0"><i class="bi bi-x-circle me-2"></i> Wait! This is a phishing simulation. Never click suspicious links. Try the other buttons instead.</div>`;
+    });
+  </script>
+</body>
 </html>
